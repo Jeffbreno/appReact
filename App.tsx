@@ -11,14 +11,16 @@ export default function App() {
   return (
     <SafeAreaView style={{flex: 1}}>
       <StatusBar />
-      <Home melhoresProdutores={false} />
-      {/* {produtores.length > 0 && 
-      <Cesta produtor={{
-        nome: produtores[0].nome, 
-        imagem: produtores[0].imagem
-      }}
-      {...produtores[0].cestas[0]} />
-    } */}
+      {/* <Home melhoresProdutores={false} /> */}
+      {produtores.length > 0 && (
+        <Cesta
+          produtor={{
+            nome: produtores[0].nome,
+            imagem: produtores[0].imagem,
+          }}
+          {...produtores[0].cestas[0]}
+        />
+      )}
     </SafeAreaView>
   );
 }
